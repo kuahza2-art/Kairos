@@ -57,3 +57,6 @@
 @media(max-width:620px){#purpose .purpose-heading{gap:14px}.purpose-emblem{flex-basis:65px;height:65px}.purpose-emblem img{width:120px;height:120px}#purpose .purpose-heading h3{font-size:30px}}
 /* Blend away the supplied logos' black backing on their blue badges. */
 .purpose-emblem img{mix-blend-mode:screen}
+/* A little more breathing room around the Mission emblem. */
+.purpose-emblem img[src*="purpose-logo-8"]{width:124px;height:124px}
+@media(max-width:620px){.purpose-emblem img[src*="purpose-logo-8"]{width:106px;height:106px}}
