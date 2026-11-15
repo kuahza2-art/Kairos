@@ -1,0 +1,52 @@
+/* Restore the rounded square panels with cloud tops. */
+#purpose{position:relative;isolation:isolate;background:none;border:0;border-radius:0;box-shadow:none;padding:50px 0 85px}
+#purpose .section-top{display:flex;justify-content:center;margin-bottom:20px}
+#purpose .section-top>span{display:none}
+#purpose .purpose-grid{display:block}
+#purpose .purpose-grid>div:first-child{text-align:center;max-width:640px;margin:0 auto 40px}
+#purpose h2{font-size:60px;line-height:1.12;margin-bottom:20px}
+#purpose h2 br{display:none}
+#purpose h2 em{display:block}
+#purpose .section-intro{max-width:440px;margin:0 auto;line-height:1.8}
+#purpose .drawn-star{display:none}
+#purpose .purpose-statements{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;padding-top:28px;max-width:none;margin:0;align-items:stretch}
+#purpose .purpose-statements article{position:relative;isolation:isolate;display:block;min-height:0;padding:42px 38px 38px;background:linear-gradient(160deg,#ffffffed,#f3fbf9e6);border:1px solid #fff;border-radius:34px;box-shadow:0 14px 32px #37748d13;text-align:left;overflow:visible}
+#purpose .purpose-statements article:nth-child(2){background:linear-gradient(160deg,#ffffffed,#eaf6fce6)}
+#purpose .purpose-statements article::before{content:'';position:absolute;inset:auto 24px calc(100% - 3px);height:42px;background:radial-gradient(ellipse 42px 31px at 20% 100%,#ffffffed 97%,transparent 100%),radial-gradient(ellipse 62px 42px at 46% 100%,#ffffffed 97%,transparent 100%),radial-gradient(ellipse 46px 30px at 73% 100%,#ffffffed 97%,transparent 100%);filter:none;transform:none;z-index:-1;opacity:1;mask-image:none;-webkit-mask-image:none}
+#purpose .purpose-statements article::after{content:none}
+#purpose .purpose-statements .number{display:inline-block;width:auto;height:auto;padding:0;border:0;border-radius:0;background:none;margin:0 0 12px;font-size:10px;font-weight:800;letter-spacing:2px;color:#758f9c;transform:none}
+#purpose .purpose-statements h3{font-size:38px;margin:0 0 18px;line-height:1.2;color:#24577a}
+#purpose .purpose-statements p{max-width:none;font-size:15px;line-height:1.9;color:#3b6278;margin:0;padding:0}
+@media(max-width:900px){#purpose .purpose-statements{gap:24px}#purpose .purpose-statements article{padding:32px 28px}#purpose .purpose-statements h3{font-size:34px}}
+@media(max-width:620px){#purpose{padding:30px 0 60px}#purpose h2{font-size:46px}#purpose .purpose-statements{grid-template-columns:1fr;margin:0;gap:50px;padding-top:25px}#purpose .purpose-statements article{padding:30px 26px;border-radius:28px;min-height:0}#purpose .purpose-statements h3{font-size:34px}#purpose .purpose-statements p{font-size:14px;line-height:1.85}}
+/* A continuous shallow cloud cap joins the sides without exposed seams. */
+#purpose .purpose-statements{padding-top:36px}
+#purpose .purpose-statements article,
+#purpose .purpose-statements article:nth-child(2){background:linear-gradient(to bottom,#fbfdfb 0%,#f0f8f8 100%);border:0;border-radius:0 0 32px 32px;box-shadow:0 14px 32px #37748d13}
+#purpose .purpose-statements article::before,
+#purpose .purpose-statements article:nth-child(2)::before{inset:auto 0 calc(100% - 1px);height:48px;background:url('assets/cloud-card-top.svg') center/100% 100% no-repeat;transform:none;filter:none;opacity:1;mask-image:none;-webkit-mask-image:none}
+@media(max-width:620px){#purpose .purpose-statements{gap:62px;padding-top:28px}#purpose .purpose-statements article{border-radius:0 0 28px 28px}#purpose .purpose-statements article::before{height:38px}}
+/* Give the cloud cap more height and a gentle sense of depth. */
+#purpose .purpose-statements{padding-top:48px}
+#purpose .purpose-statements article::before,
+#purpose .purpose-statements article:nth-child(2)::before{height:64px;filter:drop-shadow(0 -4px 7px #ffffff45)}
+#purpose .purpose-statements article{box-shadow:0 7px 0 #96c4d01a,0 18px 32px #37748d18}
+@media(max-width:620px){#purpose .purpose-statements{padding-top:38px;gap:72px}#purpose .purpose-statements article::before,#purpose .purpose-statements article:nth-child(2)::before{height:50px}}
+/* Plain white mission and vision panels. */
+#purpose .purpose-statements{padding-top:0;gap:28px}
+#purpose .purpose-statements article,
+#purpose .purpose-statements article:nth-child(2){background:#fff;border:0;border-radius:0;box-shadow:none;aspect-ratio:1;display:flex;flex-direction:column;justify-content:center;padding:36px;min-height:0}
+#purpose .purpose-statements article::before,
+#purpose .purpose-statements article:nth-child(2)::before,
+#purpose .purpose-statements article::after{content:none;display:none}
+@media(max-width:620px){#purpose .purpose-statements{padding-top:0;gap:24px}#purpose .purpose-statements article{padding:28px;aspect-ratio:1;min-height:0}}
+/* Restore the soft rounded cards, leaving cloud decorations removed. */
+#purpose .purpose-statements{padding-top:0;gap:32px}
+#purpose .purpose-statements article,
+#purpose .purpose-statements article:nth-child(2){display:block;aspect-ratio:auto;min-height:0;padding:42px 38px 38px;background:linear-gradient(160deg,#ffffffed,#f3fbf9e6);border:1px solid #fff;border-radius:34px;box-shadow:0 14px 32px #37748d13}
+#purpose .purpose-statements article:nth-child(2){background:linear-gradient(160deg,#ffffffed,#eaf6fce6)}
+#purpose .purpose-statements article::before,
+#purpose .purpose-statements article:nth-child(2)::before,
+#purpose .purpose-statements article::after{content:none;display:none}
+@media(max-width:900px){#purpose .purpose-statements{gap:24px}#purpose .purpose-statements article{padding:32px 28px}}
+@media(max-width:620px){#purpose .purpose-statements article{padding:30px 26px;border-radius:28px;aspect-ratio:auto}}
