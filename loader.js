@@ -30,7 +30,7 @@
     const endHour = Math.ceil((startHour - 60) / 360) * 360 + 60;
     const settling = performance.now();
     function settle(now) {
-      const t = reduced ? 1 : Math.min(1, (now - settling) / 800);
+      const t = reduced ? 1 : Math.min(1, (now - settling) / 2000);
       const eased = 1 - Math.pow(1 - t, 3);
       minuteAngle = startMinute + (endMinute - startMinute) * eased;
       hourAngle = startHour + (endHour - startHour) * eased;
@@ -41,13 +41,12 @@
       status.textContent = '2:00 PM · Our moment is now.';
       setTimeout(() => {
         overlay.classList.add('is-leaving'); setTimeout(remove, reduced ? 0 : 450);
-      }, reduced ? 150 : 650);
+      }, reduced ? 150 : 1200);
     }
     frame = requestAnimationFrame(settle);
   }
   paint();
   if (!reduced) frame = requestAnimationFrame(spin);
-  document.getElementById('loader-skip').addEventListener('click', finish);
   const loaded = document.readyState === 'complete' ? Promise.resolve() : new Promise(resolve => window.addEventListener('load', resolve, {once:true}));
   const fonts = document.fonts ? Promise.race([document.fonts.ready, new Promise(resolve => setTimeout(resolve, 2000))]) : Promise.resolve();
   Promise.race([Promise.all([loaded, fonts]), new Promise(resolve => setTimeout(resolve, 7500))])
