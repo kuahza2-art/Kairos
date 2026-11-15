@@ -50,3 +50,8 @@
 #purpose .purpose-statements article::after{content:none;display:none}
 @media(max-width:900px){#purpose .purpose-statements{gap:24px}#purpose .purpose-statements article{padding:32px 28px}}
 @media(max-width:620px){#purpose .purpose-statements article{padding:30px 26px;border-radius:28px;aspect-ratio:auto}}
+#purpose .purpose-heading{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+#purpose .purpose-heading h3{margin:0}
+.purpose-emblem{position:relative;display:block;flex:0 0 76px;height:76px;background:linear-gradient(135deg,#4a8da5,#285977);border-radius:50%;overflow:hidden}
+.purpose-emblem img{position:absolute;width:140px;height:140px;max-width:none;object-fit:contain;left:50%;top:50%;transform:translate(-50%,-50%)}
+@media(max-width:620px){#purpose .purpose-heading{gap:14px}.purpose-emblem{flex-basis:65px;height:65px}.purpose-emblem img{width:120px;height:120px}#purpose .purpose-heading h3{font-size:30px}}
