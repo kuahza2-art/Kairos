@@ -115,3 +115,8 @@
 @media(max-width:900px){.program{grid-template-columns:minmax(0,1fr) 165px}.program-art{width:165px;height:165px}}
 @media(max-width:620px){.program{grid-template-columns:minmax(0,1fr) 160px;padding:24px 20px;gap:18px 12px}.program-art{width:160px;height:160px}}
 @media(max-width:380px){.program{grid-template-columns:minmax(0,1fr) 140px;padding:20px 16px}.program-art{width:140px;height:140px}.program-copy h3{font-size:28px}}
+/* Gentle feedback for pointer and keyboard interaction. */
+.program{transition:transform .22s ease,box-shadow .22s ease;transform-origin:center;position:relative}
+@media(hover:hover) and (pointer:fine){.program:hover{transform:translateY(-4px) scale(1.025);box-shadow:0 15px 32px #315d7926;z-index:2}}
+.program:focus-within{transform:translateY(-4px) scale(1.025);box-shadow:0 15px 32px #315d7926;z-index:2}
+@media(prefers-reduced-motion:reduce){.program{transition:none}.program:hover,.program:focus-within{transform:none}}
