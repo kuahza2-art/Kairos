@@ -7,14 +7,15 @@
   const status = document.getElementById('loading-status');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const began = performance.now();
-  let frame, closing = false, minuteAngle = 0, hourAngle = 60;
+  let frame, closing = false, minuteAngle = 540, hourAngle = 45;
   const paint = () => {
     minute.setAttribute('transform', `rotate(${minuteAngle} 100 100)`);
     hour.setAttribute('transform', `rotate(${hourAngle} 100 100)`);
   };
   const spin = now => {
-    minuteAngle = (now - began) * .24;
-    hourAngle = 60 + (now - began) * .08;
+    const clockMinutes = 90 + 28 * (1 - Math.exp(-(now - began) / 3000));
+    minuteAngle = clockMinutes * 6;
+    hourAngle = clockMinutes * .5;
     paint(); frame = requestAnimationFrame(spin);
   };
   const remove = () => {
@@ -26,8 +27,8 @@
     if (closing) return;
     closing = true; cancelAnimationFrame(frame);
     const startMinute = minuteAngle, startHour = hourAngle;
-    const endMinute = Math.ceil(startMinute / 360) * 360;
-    const endHour = Math.ceil((startHour - 60) / 360) * 360 + 60;
+    const endMinute = 720;
+    const endHour = 60;
     const settling = performance.now();
     function settle(now) {
       const t = reduced ? 1 : Math.min(1, (now - settling) / 2000);
