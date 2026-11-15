@@ -7,13 +7,13 @@
   const status = document.getElementById('loading-status');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const began = performance.now();
-  let frame, closing = false, minuteAngle = 540, hourAngle = 45;
+  let frame, closing = false, minuteAngle = 0, hourAngle = 0;
   const paint = () => {
     minute.setAttribute('transform', `rotate(${minuteAngle} 100 100)`);
     hour.setAttribute('transform', `rotate(${hourAngle} 100 100)`);
   };
   const spin = now => {
-    const clockMinutes = 90 + 28 * (1 - Math.exp(-(now - began) / 3000));
+    const clockMinutes = 116 * (1 - Math.exp(-(now - began) / 1600));
     minuteAngle = clockMinutes * 6;
     hourAngle = clockMinutes * .5;
     paint(); frame = requestAnimationFrame(spin);
