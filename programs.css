@@ -1,0 +1,117 @@
+/* Campaign programs: compact artwork-led cards. */
+.programs{padding-bottom:60px}
+.programs-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px;position:relative;z-index:1}
+.programs-heading h2{font-size:50px;line-height:1.15;margin:15px 0 0}
+.programs-heading>p{font-size:13px;line-height:1.85;color:#3d657e;margin-bottom:5px}
+.program-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.program{--accent:#496b55;--tint:#edf5e6;display:grid;grid-template-columns:120px minmax(0,1fr);gap:22px;padding:24px;border:1px solid #fff;background:linear-gradient(135deg,#fffffff5,#f7fcf5e6);border-radius:24px;box-shadow:0 8px 24px #31617b10;align-items:start;min-width:0}
+.program-prom{--accent:#8a6449;--tint:#fbefe0}.program-play{--accent:#80653d;--tint:#f7efdc}.program-you{--accent:#2e6894;--tint:#eaf5fb}
+.program-art{position:relative;align-self:start;padding:5px;background:#fff;border-radius:19px;box-shadow:0 4px 14px #24576b12;line-height:0}
+.program-art img{display:block;position:static;width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:15px}
+.program-index{position:absolute;left:10px;top:10px;display:grid;place-items:center;width:23px;height:23px;border-radius:50%;border:1px solid #fff;background:#fffcf1ed;color:#41677b;font-size:9px;font-weight:800;line-height:1}
+.program-copy{min-width:0;padding:0}
+.program-category{display:inline-block;font-size:8px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:var(--accent);background:var(--tint);border-radius:20px;padding:4px 9px;margin:0 0 10px;line-height:1.4}
+.program-copy h3{font-family:'Lobster',cursive;font-size:29px;line-height:1.15;color:#255777;margin:0 0 14px}
+.program-description{font-size:13px;line-height:1.75;color:#3e6278;margin:0}
+.programs-note{text-align:center;font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:14px;color:#3d657e;margin:28px 0 0}
+@media(max-width:1050px){.program-list{grid-template-columns:1fr;max-width:790px;margin:auto}.program{grid-template-columns:135px minmax(0,1fr);gap:26px}.program-description{font-size:14px}}
+@media(max-width:620px){
+.programs-heading{display:block;margin-bottom:25px}.programs-heading h2{font-size:38px}.programs-heading>p{font-size:13px;margin-top:16px}
+.program-list{gap:18px}.program{grid-template-columns:88px minmax(0,1fr);gap:16px;padding:20px;border-radius:22px}
+.program-art{grid-column:1;grid-row:1;padding:4px;border-radius:15px}.program-art img{border-radius:11px}
+.program-copy{display:contents}.program-title{grid-column:2;grid-row:1;align-self:center}
+.program-category{font-size:8px;letter-spacing:.6px;padding:4px 7px;margin-bottom:8px}.program-copy h3{font-size:27px;margin:0}
+.program-description{grid-column:1/-1;font-size:13px;line-height:1.8;margin-top:1px}.program-index{width:19px;height:19px;font-size:8px;top:8px;left:8px}
+.programs-note{font-size:13px;max-width:280px;margin:25px auto 0}
+}
+/* Program tiles with large artwork and a simple editorial layout. */
+.program-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;max-width:none}
+.program{display:flex;flex-direction:column;gap:0;padding:0;border:1px solid #fff;border-radius:22px;overflow:hidden;background:#fffffff0;box-shadow:0 8px 24px #31617b0d}
+.program-art{position:relative;align-self:stretch;background:var(--tint);padding:0;border-radius:0;box-shadow:none;line-height:0}
+.program-art img{width:100%;height:auto;aspect-ratio:1.35;object-fit:cover;object-position:center;border-radius:0}
+.program-index{left:13px;top:13px;width:25px;height:25px;font-size:9px}
+.program-copy{display:block;padding:20px 19px 24px}
+.program-title{display:block}
+.program-category{padding:0;background:none;border-radius:0;font-size:8px;letter-spacing:1px;margin-bottom:10px}
+.program-copy h3{font-size:28px;margin:0 0 15px}
+.program-description{font-size:12px;line-height:1.8;margin:0}
+@media(max-width:1100px){.program-list{grid-template-columns:repeat(2,minmax(0,1fr));max-width:none}.program-art img{aspect-ratio:1.8;object-fit:contain}.program-copy{padding:22px 24px}.program-description{font-size:13px}}
+@media(max-width:620px){.program-list{grid-template-columns:1fr;gap:22px}.program{display:grid;grid-template-columns:110px minmax(0,1fr);border-radius:20px}.program-art{grid-column:1;grid-row:1;align-self:stretch;display:flex;align-items:center;justify-content:center;padding:0;background:var(--tint)}.program-art img{width:100%;height:auto;aspect-ratio:1;object-fit:contain;border-radius:0}.program-copy{display:block;padding:20px 18px}.program-title{display:block}.program-copy h3{font-size:27px;margin-bottom:12px}.program-category{font-size:8px;margin-bottom:8px}.program-description{font-size:12px;line-height:1.75}.program-index{top:10px;left:10px;width:21px;height:21px}}
+.program-art img{object-fit:contain}
+/* An open program list, separated by fine rules instead of boxed tiles. */
+.program-list{display:flex;flex-direction:column;gap:0;max-width:1000px;margin:auto}
+.program{display:grid;grid-template-columns:140px minmax(0,1fr);gap:32px;padding:26px 0;background:none;border:0;border-bottom:1px solid #467b9233;border-radius:0;box-shadow:none;overflow:visible;align-items:center}
+.program:first-child{border-top:1px solid #467b9233}
+.program-art{position:relative;display:block;align-self:center;padding:0;grid-column:auto;grid-row:auto;background:none;box-shadow:none;border-radius:22px;line-height:0}
+.program-art img{display:block;width:140px;height:140px;aspect-ratio:1;object-fit:contain;border-radius:22px}
+.program-index{left:-10px;top:-8px;width:28px;height:28px;font-size:10px;background:#fffcf0;border:2px solid #fff}
+.program-copy{display:grid;grid-template-columns:minmax(180px,.75fr) minmax(0,1.25fr);align-items:center;gap:30px;padding:0}
+.program-title{display:block}
+.program-category{font-size:9px;letter-spacing:1.1px;margin:0 0 10px;padding:0;background:none}
+.program-copy h3{font-size:34px;margin:0;line-height:1.15}
+.program-description{font-size:14px;line-height:1.85;margin:0;grid-column:auto}
+@media(max-width:900px){.program{grid-template-columns:120px minmax(0,1fr);gap:25px}.program-art img{width:120px;height:120px}.program-copy{display:block}.program-copy h3{font-size:31px;margin-bottom:14px}.program-description{font-size:13px}}
+@media(max-width:620px){.program-list{gap:0}.program{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:25px 0;border-radius:0;align-items:start}.program-art{grid-column:1;grid-row:1;align-self:start;padding:0;background:none;border-radius:15px}.program-art img{width:88px;height:88px;object-fit:contain;border-radius:15px}.program-index{width:22px;height:22px;left:-6px;top:-6px;font-size:8px}.program-copy{display:contents;padding:0}.program-title{grid-column:2;grid-row:1;align-self:center}.program-category{font-size:8px;letter-spacing:.8px;margin-bottom:8px}.program-copy h3{font-size:29px;margin:0}.program-description{grid-column:1/-1;font-size:13px;line-height:1.8;margin:0}}
+/* A compact campaign board with artwork and title sharing the top row. */
+.programs-heading{max-width:1080px;margin:0 auto 34px}
+.program-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1080px;margin:auto}
+.program{--accent:#4c7259;--tint:#edf5e8;position:relative;display:grid;grid-template-columns:minmax(0,1fr) 116px;grid-template-rows:auto auto;gap:20px 24px;align-items:center;padding:28px 30px;background:linear-gradient(125deg,#fffffff0,var(--tint));border:1px solid #ffffffe6;border-radius:28px;box-shadow:0 8px 24px #2b5f7710;overflow:hidden}
+.program:first-child{border-top:1px solid #ffffffe6}
+.program-prom{--accent:#926547;--tint:#fff0e0}.program-play{--accent:#8a6b3d;--tint:#fbf1d8}.program-you{--accent:#3b7298;--tint:#e4f3fb}
+.program-art{grid-column:2;grid-row:1;position:relative;display:block;align-self:center;justify-self:end;width:116px;height:116px;padding:5px;background:#ffffffb3;border:1px solid #fff;border-radius:25px;box-shadow:0 5px 15px #315d7910;transform:rotate(3deg)}
+.program:nth-child(even) .program-art{transform:rotate(-3deg)}
+.program-art img{display:block;width:100%;height:100%;aspect-ratio:1;object-fit:contain;border-radius:19px}
+.program-index{display:none}
+.program-copy{display:contents;padding:0}
+.program-title{grid-column:1;grid-row:1;align-self:center;min-width:0}
+.program-category{display:block;padding:0;background:none;color:var(--accent);font-size:9px;font-weight:800;letter-spacing:1.3px;margin:0 0 12px}
+.program-copy h3{font-family:'Lobster',cursive;color:#254f6c;font-size:36px;line-height:1.1;margin:0;max-width:240px}
+.program-description{grid-column:1/-1;grid-row:2;padding-top:17px;border-top:1px solid #557c8d24;font-size:13px;line-height:1.8;margin:0;color:#3e6278}
+.programs-note{margin-top:28px}
+@media(max-width:900px){.program{padding:25px;grid-template-columns:minmax(0,1fr) 95px;gap:18px}.program-art{width:95px;height:95px;border-radius:21px}.program-art img{border-radius:16px}.program-copy h3{font-size:30px}.program-category{font-size:8px;letter-spacing:.8px}}
+@media(max-width:620px){.program-list{grid-template-columns:1fr;gap:20px}.program{grid-template-columns:minmax(0,1fr) 100px;gap:18px;padding:24px;border-radius:25px}.program-art{grid-column:2;grid-row:1;width:100px;height:100px;align-self:center;border-radius:22px;padding:4px}.program-title{grid-column:1;grid-row:1}.program-copy h3{font-size:32px}.program-category{font-size:8px;letter-spacing:.9px;margin-bottom:10px}.program-description{grid-column:1/-1;grid-row:2;font-size:13px;line-height:1.8;padding-top:17px}.program-art img{width:100%;height:100%;border-radius:17px}}
+/* The cloud transition opens onto a warm yellow programs section. */
+.ideas.programs{background:linear-gradient(to bottom,transparent 0,#fff4d8 160px,#fff1ce 55%,#faf1db 100%)}
+.ideas.programs::after{background:radial-gradient(ellipse at 15% 55%,#fff8e8cc,transparent 55%),radial-gradient(ellipse at 80% 45%,#fff0c6cc,transparent 58%)}
+/* Fade the yellow section back into the page sky at its lower edge. */
+.ideas.programs{padding-bottom:130px;background:linear-gradient(to bottom,transparent 0,#fff4d8 160px,#fff1ce 55%,#faf1db calc(100% - 160px),#faf1dbb3 calc(100% - 100px),#faf1db40 calc(100% - 45px),transparent 100%)}
+@media(max-width:620px){.ideas.programs{padding-bottom:110px}}
+/* Carry the clouds into the warm background without a blue band underneath. */
+.ideas.programs::before{background-image:url('assets/clouds-warm.svg');mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 70%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 70%,transparent 100%)}
+.ideas.programs::after{background:linear-gradient(to bottom,transparent 0%,#fff4d8 78%);filter:none;top:-45px;height:190px}
+.ideas.programs{background:linear-gradient(to bottom,#fff4d8 0,#fff1ce 55%,#faf1db calc(100% - 160px),#faf1dbb3 calc(100% - 100px),#faf1db40 calc(100% - 45px),transparent 100%)}
+/* A continuous backdrop fades beneath the decorative cloud layer. */
+.ideas.programs{background:linear-gradient(to bottom,transparent 0px,#fff4d830 45px,#fff4d89c 110px,#fff4d8 200px,#fff1ce 55%,#faf1db calc(100% - 160px),#faf1dbb3 calc(100% - 100px),#faf1db40 calc(100% - 45px),transparent 100%)}
+.ideas.programs::after{content:'';position:absolute;left:0;right:0;top:-130px;height:330px;background:linear-gradient(to bottom,transparent 0%,#fff4d818 22%,#fff4d860 48%,#fff4d8c9 75%,#fff4d8 100%);filter:none;z-index:-2;pointer-events:none}
+.ideas.programs::before{top:-70px;height:220px;background:url('assets/clouds-warm.svg') center/100% 100% no-repeat;z-index:-1;opacity:.92;mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 58%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 58%,transparent 100%)}
+@media(max-width:620px){.ideas.programs::before{top:-55px;height:165px;background-size:170% 100%}.ideas.programs::after{top:-100px;height:300px}}
+/* Card tints follow the updated program artwork. */
+.program-grow{--accent:#34714c;--tint:#e5f2dc;background:linear-gradient(125deg,#fcfff8,#e3f0dc);border-color:#d0e6c6}
+.program-prom{--accent:#a64c7c;--tint:#ffe0ed;background:linear-gradient(125deg,#fff9fc,#fbddec);border-color:#f2c6dc}
+.program-play{--accent:#4079b0;--tint:#ddecff;background:linear-gradient(125deg,#f9fcff,#dcecff);border-color:#c6dcf4}
+.program-you{--accent:#9b7430;--tint:#fff0c7;background:linear-gradient(125deg,#fffdf5,#ffefc6);border-color:#eddda9}
+.program-art{background:#ffffffc9;border-color:#fffffff2;box-shadow:0 5px 15px #315d790b}
+.program-copy h3{color:var(--accent)}
+/* Slightly larger program artwork on desktop and mobile. */
+.program{grid-template-columns:minmax(0,1fr) 132px}
+.program-art{width:132px;height:132px}
+@media(max-width:900px){.program{grid-template-columns:minmax(0,1fr) 110px}.program-art{width:110px;height:110px}}
+@media(max-width:620px){.program{grid-template-columns:minmax(0,1fr) 116px}.program-art{width:116px;height:116px}}
+/* Give the program logos more prominence. */
+.program{grid-template-columns:minmax(0,1fr) 160px}
+.program-art{width:160px;height:160px;padding:3px}
+@media(max-width:900px){.program{grid-template-columns:minmax(0,1fr) 140px}.program-art{width:140px;height:140px}}
+@media(max-width:620px){.program{grid-template-columns:minmax(0,1fr) 140px;gap:18px 14px}.program-art{width:140px;height:140px}}
+@media(max-width:380px){.program{padding:20px;grid-template-columns:minmax(0,1fr) 120px}.program-art{width:120px;height:120px}}
+/* Let the logos sit directly on their program card colors. */
+.program-art{background:transparent;border:0;box-shadow:none;padding:0}
+/* Preserve the full glow around the supplied logo artwork. */
+.program-art{overflow:visible;border-radius:0}
+.program-art img{border-radius:0;overflow:visible}
+.program{overflow:visible}
+/* Larger logo artwork with room for the glow. */
+.program{grid-template-columns:minmax(0,1fr) 185px}
+.program-art{width:185px;height:185px}
+@media(max-width:900px){.program{grid-template-columns:minmax(0,1fr) 165px}.program-art{width:165px;height:165px}}
+@media(max-width:620px){.program{grid-template-columns:minmax(0,1fr) 160px;padding:24px 20px;gap:18px 12px}.program-art{width:160px;height:160px}}
+@media(max-width:380px){.program{grid-template-columns:minmax(0,1fr) 140px;padding:20px 16px}.program-art{width:140px;height:140px}.program-copy h3{font-size:28px}}

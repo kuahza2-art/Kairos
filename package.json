@@ -1,0 +1,5 @@
+{
+  "name": "kairos-campaign",
+  "private": true,
+  "scripts": { "start": "node server.cjs" }
+}
