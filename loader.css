@@ -1,0 +1,12 @@
+.site-loader{display:none}
+.kairos-loading .site-loader{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;transition:opacity .45s ease;gap:15px;padding:25px;text-align:center}
+html.kairos-loading{overflow:hidden}
+.site-loader.is-leaving{opacity:0;pointer-events:none}
+.loader-clock{position:relative;width:min(320px,68vw);aspect-ratio:1}
+.loader-clock img,.loader-clock svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.loader-clock svg{color:#c5b991}
+.loader-label{font-family:Georgia,serif;font-style:italic;font-size:20px;color:#7e7358;margin:0}
+.loader-status{font-family:'Nunito',sans-serif;color:#8a816c;font-size:12px;letter-spacing:1px;margin:0}
+.loader-skip{border:0;border-bottom:1px solid #c9be9e;background:none;color:#8a816c;font:12px Georgia,serif;padding:6px;cursor:pointer;margin-top:10px}
+.loader-skip:focus-visible{outline:2px solid #8a816c;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){.kairos-loading .site-loader{transition:none}}
