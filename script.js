@@ -2,7 +2,7 @@ const shareButton = document.querySelector('.share');
 const status = document.querySelector('#share-status');
 shareButton.addEventListener('click', async () => {
   const local = ['localhost', '127.0.0.1', ''].includes(location.hostname) || location.protocol === 'file:';
-  const message = 'Vote Kairos #2 — The time for change is now.';
+  const message = 'Vote Kairos #2 — The Time For Change Is Now.';
   const text = local ? message : `${message} ${location.href.split('#')[0]}`;
   try {
     if (navigator.share && !local) {

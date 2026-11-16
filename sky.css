@@ -161,3 +161,23 @@ footer .brand-logo{width:100px}
 .card-art.supplied-logo{height:auto;padding:15px 0 22px;display:flex;justify-content:center;align-items:center}
 .supplied-logo img{display:block;width:145px;height:145px;object-fit:contain;border-radius:22px}
 @media(max-width:620px){.card-art.supplied-logo{height:auto;padding:10px 0 20px}.supplied-logo img{width:110px;height:110px;border-radius:18px}}
+/* Make real actions visibly inviting without animating passive cards. */
+.button,.nav-vote,.all-you-quiz-link,.meaning-title-link{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.button:hover,.nav-vote:hover,.all-you-quiz-link:hover,.meaning-title-link:hover{transform:translateY(-3px);box-shadow:0 7px 18px #2b617626}
+.button:active,.nav-vote:active{transform:translateY(1px) scale(.97)}
+.button>span{display:inline-block;transition:transform .2s}
+.button:hover>span{transform:translate(3px,-3px)}
+.share{animation:share-invitation 4s ease-in-out 3}
+@keyframes share-invitation{0%,65%,100%{box-shadow:0 0 0 0 #327b9620}80%{box-shadow:0 0 0 9px #327b9600;transform:translateY(-2px)}}
+.meaning-title-link{font-size:15px;padding:9px 17px;text-decoration:underline;text-underline-offset:4px;gap:12px}
+.programs-note{line-height:1.8}
+@media(max-width:620px){.meaning-title-link{font-size:14px!important;padding:9px 14px}}
+@media(prefers-reduced-motion:reduce){.share{animation:none}.button,.nav-vote,.all-you-quiz-link,.meaning-title-link,.button>span{transition:none}.button:hover,.nav-vote:hover,.all-you-quiz-link:hover,.meaning-title-link:hover,.button:active,.nav-vote:active,.button:hover>span{transform:none}}
+/* Give the mobile header a full row for its logo and roomy navigation below. */
+@media(max-width:620px){
+.nav{height:auto;min-height:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;padding-top:22px;padding-bottom:20px}
+.nav .brand-logo{width:125px;height:auto}
+.nav nav{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 14px;width:100%;font-size:12px}
+.nav nav>a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 8px}
+.nav nav>.nav-vote{padding:9px 16px}
+}

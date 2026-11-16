@@ -19,6 +19,7 @@
     paint(); frame = requestAnimationFrame(spin);
   };
   const remove = () => {
+    window.kairosSounds?.stop();
     root.classList.remove('kairos-loading');
     overlay.remove();
     clearTimeout(window.kairosLoaderFallback);
@@ -39,6 +40,7 @@
       if (t < 1) { frame = requestAnimationFrame(settle); return; }
       // Exact final state: minute at XII, hour at II (2:00).
       minuteAngle = 0; hourAngle = 60; paint();
+      window.kairosSounds?.finish();
       status.textContent = '2:00 PM · Our moment is now.';
       setTimeout(() => {
         overlay.classList.add('is-leaving'); setTimeout(remove, reduced ? 0 : 450);
@@ -51,5 +53,5 @@
   const loaded = document.readyState === 'complete' ? Promise.resolve() : new Promise(resolve => window.addEventListener('load', resolve, {once:true}));
   const fonts = document.fonts ? Promise.race([document.fonts.ready, new Promise(resolve => setTimeout(resolve, 2000))]) : Promise.resolve();
   Promise.race([Promise.all([loaded, fonts]), new Promise(resolve => setTimeout(resolve, 7500))])
-    .then(() => setTimeout(finish, Math.max(0, 1200 - (performance.now() - began))));
+    .then(() => setTimeout(finish, Math.max(0, 3000 - (performance.now() - began))));
 })();
