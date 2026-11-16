@@ -19,7 +19,6 @@
     paint(); frame = requestAnimationFrame(spin);
   };
   const remove = () => {
-    window.kairosSounds?.stop();
     root.classList.remove('kairos-loading');
     overlay.remove();
     clearTimeout(window.kairosLoaderFallback);
@@ -40,7 +39,6 @@
       if (t < 1) { frame = requestAnimationFrame(settle); return; }
       // Exact final state: minute at XII, hour at II (2:00).
       minuteAngle = 0; hourAngle = 60; paint();
-      window.kairosSounds?.finish();
       status.textContent = '2:00 PM · Our moment is now.';
       setTimeout(() => {
         overlay.classList.add('is-leaving'); setTimeout(remove, reduced ? 0 : 450);
