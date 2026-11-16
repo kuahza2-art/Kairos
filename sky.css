@@ -181,3 +181,13 @@ footer .brand-logo{width:100px}
 .nav nav>a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:9px 8px}
 .nav nav>.nav-vote{padding:9px 16px}
 }
+/* Keep decorative planes and clouds inside the mobile page width. */
+@media(max-width:620px){
+html{overflow-x:hidden}
+body{width:100%;max-width:100%;overflow-x:clip}
+main{overflow-x:clip}
+.hero,.meaning,.candidates,.stand,.programs>.wrap{min-width:0}
+.candidate-grid,.program-list,.purpose-statements{min-width:0}
+.nav nav{max-width:100%}
+footer{flex-wrap:wrap;gap:14px}
+}
